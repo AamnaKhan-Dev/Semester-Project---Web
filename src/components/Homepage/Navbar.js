@@ -1,10 +1,12 @@
 import React from "react";
+import "./navbar.css";
 import Logo from "../../Logo.js";
+
 class Navbar extends React.Component {
   state = {};
   render() {
     return (
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-mint">
         <div className="container-fluid">
           {/* <a href="index.html" style={{ paddingRight: "10px" }}>
             <svg
@@ -47,7 +49,7 @@ class Navbar extends React.Component {
             <Logo />
             <span style={{ paddingLeft: "5px" }}>PakZone</span>
           </a>
-          
+
           <button
             className="navbar-toggler"
             type="button"
@@ -120,11 +122,11 @@ class Navbar extends React.Component {
               </button>
             </form> */}
             <div className="navbar-buttons">
-              <button className="btn" onClick={handleLogin} style={{ backgroundImage: `url(./images/user-btn.png)` }}>
-                Login
+              <button className="btn profile-btn" onClick={handleLogin}>
+                <Profile />
               </button>
-              <button className="btn" onClick={handleCart} style={{ backgroundImage: `url(cart.png)` }}>
-                Cart
+              <button className="btn cart-btn" onClick={handleCart}>
+                <Cart />
               </button>
             </div>
           </div>
@@ -141,5 +143,16 @@ function handleLogin() {
 function handleCart() {
   // Handle cart button click
 }
-
+function Cart() {
+  return (
+      <img src="../images/cart-btn.png" width={20} height={20} alt="cart" />
+ 
+  );
+}
+function Profile() {
+  return (
+    <img src="../images/user-btn.png" width={20} height={20} alt="profile" />
+  
+  );
+}
 export default Navbar;

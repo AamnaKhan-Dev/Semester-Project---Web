@@ -1,0 +1,22 @@
+/* navbar.css */
+.profile-btn:hover,
+.cart-btn:hover {
+  border-radius: 50%;
+}
+
+.profile-btn,
+.cart-btn {
+  filter: invert(1);
+  margin-top: -2px;
+  
+  
+}
+.cart-btn{
+    margin-right: 80px;
+}
+.profile-btn{
+    margin-right: 25px;
+}
+.navbar-brand{
+    margin-top: -5px;
+}
